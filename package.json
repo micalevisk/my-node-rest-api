@@ -1,0 +1,30 @@
+{
+  "name": "my-node-rest-api",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/micalevisk/my-node-rest-api.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "rest",
+    "api"
+  ],
+  "author": "Micael Levi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/micalevisk/my-node-rest-api/issues"
+  },
+  "homepage": "https://github.com/micalevisk/my-node-rest-api#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.1",
+    "jwt-simple": "^0.5.1"
+  }
+}
