@@ -5,6 +5,7 @@
 > read [Boas Práticas JS](https://github.com/wbruno/boas-praticas-js) <br>
 > view api doc sample https://github.com/justintv/Twitch-API/blob/master/v3_resources/channels.md <br>
 > view api doc sample https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md <br>
+> view content dispose https://github.com/typicode/json-server <br>
 
 # ¬ TODO
 - documentação na página HTML
