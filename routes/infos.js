@@ -1,11 +1,10 @@
-var express = require('express');
-var router = express.Router();
-
-var resources = require('../resources');
+const express = require('express');
+const router = express.Router();
 
 const _ = require('../utils');
 const ResponseMessage = require('../reponse_message');
 
+const resources = require('../resources');
 
 /**
  * Alterar alguma informação global.
@@ -16,7 +15,6 @@ const ResponseMessage = require('../reponse_message');
  * @param {String} data_lista       - format: "dd/mm"
  * @return {Object}
  */
-// router.put('/infos', function(req, res, next) {
 router.put('/', function(req, res, next) {
     let qParams = req.query;
     let bodyParams = req.body || req.headers['x-www-form-urlencoded'];

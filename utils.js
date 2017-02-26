@@ -14,16 +14,6 @@ Number.prototype.notValid= function ()    { return !settings.chat_validos.contai
 
 module.exports = {
 
-	// Return path to html file (on views folder)
-	page: function(htmlfile){
-		return __dirname + '/views/' + htmlfile.trim().replace(/\.html$/,'') + '.html';
-	},
-
-	//  Return path to routes files
-	routePath: function(filename){
-		return __dirname + '/routes/' + filename;
-	},
-
 	// Return the second value if the first null, undefined ou não possuir alguma propriedade
 	chooseValid: function(obj1, obj2) {
 		if(!obj1 || typeof obj1 === 'undefined') return obj2

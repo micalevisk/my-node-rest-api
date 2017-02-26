@@ -2,7 +2,7 @@
  * API PARA O CONSUMO ÚTIL DO TELEGRAM BOT @forca_tarefa_bot
  * ---------------------------------------------------------
  * @author Micael Levi
- * @version 0.19-2 (02/19)
+ * @version 0.25-2
  * 
  * Express API http://expressjs.com/en/api.html
  * @see https://www.youtube.com/watch?v=p-x6WdwaJco
@@ -11,53 +11,45 @@
  */
 
 
-// ============================================ //
-require('dotenv').load({ path: __dirname + '/__private__/.env' })
-const _ = require('./utils')
+// ======================================================================================== //
+const _ = require('./utils');
 
-var express   = require('express')
-var bodyParser= require('body-parser')
-var jwt       = require('jwt-simple')
+const express   = require('express');
+const bodyParser= require('body-parser');
+const path      = require('path');
+const logger    = require('morgan');
+const jwt       = require('jwt-simple');
 
-const Usuario = require('./models/bean/usuario')
-const Questao = require('./models/bean/questao')
-const ResponseMessage = require('./reponse_message')
+require('dotenv').load({ path: path.join(__dirname,'__private__', '.env') });
 
-var infos = require( _.routePath('infos') );
-// ============================================ //
+const Usuario = require('./models/bean/usuario');
+const Questao = require('./models/bean/questao');
+const ResponseMessage = require('./reponse_message');
 
-/////////////
-var resources = require('./resources');
-/////////////
+const infos = require( path.join(__dirname, 'routes', 'infos.js') );
+const index = require( path.join(__dirname, 'routes', 'index.js') );
+// ======================================================================================== //
+
+///////////////
+const resources = require('./resources');
+///////////////
 
 
+let app = express();
 
-// =========================================================================== //
-var app = express();
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'jade');
 app.set('json spaces', 40);
+
+app.use(logger('dev'));
 app.use(bodyParser.json()); // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
-app.use('/resources/infos', infos); // ~/resources/infos
 
+app.use('/', index);
+app.get('/resources', (req, res) => res.send(resources));
+app.use('/resources/infos', infos);
 
-app.use(function (req,res,next) { // rastrear acessos
-    console.log(`/${req.method}${req.url}`);
-    next();
-});
-
-app.get('/', function(req, res){
-    res.sendFile( _.page('index') );
-});
-/*
-app.get('/', function (req, res) {
-    res.send(`Banco Reservado ao ${'Tio Ed'.asBold()}`); // na página inicial
-});
-*/
-
-app.get('/resources', function(req, res) {
-    res.send(resources);
-});
 
 // ---------------------------------------------------> OAuth 2.0
 /*
@@ -93,13 +85,13 @@ console.log('~> token:', TOKEN);
         app.get(`/resources/${p.substr(1)}`, cbGet);
     });
 })();
-// =========================================================================== //
 
 
 /* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 
 function findUsuarioByUsername(username){
     let store_usuarios = resources._usuarios;
+    if(!_.isValid(store_usuarios)) return;
     return store_usuarios.find(u => u.username === username);
 }
 
@@ -174,6 +166,7 @@ app.post('/resources/usuarios/:username/adicionarQuestao', function(req, res) {
 
 function findQuestaoByNumero(numero){
     var store_questoes = resources._questoes;
+    if(!_.isValid(store_questoes)) return;
     let cb = (q) => q.numero === parseInt(numero);
     return store_questoes.find(cb);
 }
