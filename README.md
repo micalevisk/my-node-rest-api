@@ -22,6 +22,7 @@
 
 ### ~ USUARIOS
 - [x] `GET    ~/usuarios/:username` recupera informações de um usuário
+- [x] `GET    ~/search/usuarios/:username` recupera informações de um usuário (substituir o de cima ^)
 - [ ] `POST   ~/usuarios/:username?...` insere um usuário (se não houver um com o mesmo nick)
 - [ ] `PUT    ~/usuarios/:username?...` altera as informações de um usuário
 - [ ] `DELETE ~/usuarios/:username` apaga um usuário pelo seu nick
@@ -31,6 +32,7 @@
 
 ### ~ QUESTOES 
 - [x] `GET    ~/questoes/:numero` recupera informações de uma questão pelo seu número
+- [x] `GET    ~/search/questoes/:numero` recupera informações de uma questão pelo seu número (substituir o de cima ^)
 - [x] `POST   ~/questoes?numero=...&enunciado=...` insere uma *nova* questão
 - [x] `PUT    ~/questoes/:numero` altera as informações de uma questão pelo seu número
 - [x] `DELETE ~/questoes/:numero` apaga uma questão pelo seu número
