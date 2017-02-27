@@ -6,6 +6,7 @@
 > view api doc sample https://github.com/justintv/Twitch-API/blob/master/v3_resources/channels.md <br>
 > view api doc sample https://github.com/yagop/node-telegram-bot-api/blob/master/doc/api.md <br>
 > view content dispose https://github.com/typicode/json-server <br>
+> vide JADE example [How to Use Jade and Handlebars in Express.js](https://webapplog.com/jade-handlebars-express/) <br>
 
 # ¬ TODO
 - documentação na página HTML
