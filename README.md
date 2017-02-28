@@ -1,4 +1,5 @@
 # My first REST API
+> todo example [Creating a Simple RESTful Web App with Node.js, Express, and MongoDB](http://cwbuecheler.com/web/tutorials/2014/restful-web-app-node-express-mongodb/) <br>
 > vide [Design de API REST, em 7 dicas simples](http://sensedia.com/blog/apis/design-de-api-rest) <br>
 > vide [Construindo uma API Rest com ExpressJS - NodeJS](https://pt-br.eventials.com/wbruno.moraes/construindo-uma-api-rest-com-expressjs-nodejs-2/) <br>
 > vide [Build a RESTful API Using Node and Express 4](https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4) <br>
@@ -9,9 +10,19 @@
 > vide JADE example [How to Use Jade and Handlebars in Express.js](https://webapplog.com/jade-handlebars-express/) <br>
 
 # ¬ TODO
-- documentação na página HTML
-- exemplos de cada método (usando o cURL)
-- autenticação OAuth 2.0
+- [ ] documentação na página HTML
+- [ ] exemplos de cada método (usando o cURL)
+- [ ] autenticação OAuth 2.0
+- [ ] organizar seguindo:
+	```
+	├── raiz
+	│     ├── app.js
+	│     ├── bin
+	│     │    └── www
+	│     ├── controllers/
+	│     ├── middlewares/
+	│     └── routes/
+	```
 
 ----------
 
