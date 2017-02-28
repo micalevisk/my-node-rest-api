@@ -1,5 +1,6 @@
 # My first REST API
 > todo example [Creating a Simple RESTful Web App with Node.js, Express, and MongoDB](http://cwbuecheler.com/web/tutorials/2014/restful-web-app-node-express-mongodb/) <br>
+> vide [Node API Examples](https://github.com/laedanthehuman/node-api-examples) <br>
 > vide [Design de API REST, em 7 dicas simples](http://sensedia.com/blog/apis/design-de-api-rest) <br>
 > vide [Construindo uma API Rest com ExpressJS - NodeJS](https://pt-br.eventials.com/wbruno.moraes/construindo-uma-api-rest-com-expressjs-nodejs-2/) <br>
 > vide [Build a RESTful API Using Node and Express 4](https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4) <br>
@@ -15,13 +16,32 @@
 - [ ] autenticação OAuth 2.0
 - [ ] organizar seguindo:
 	```
-	├── raiz
-	│     ├── app.js
-	│     ├── bin
-	│     │    └── www
-	│     ├── controllers/
-	│     ├── middlewares/
-	│     └── routes/
+	.
+	├── app.js
+	├── package.json
+	├── README.md
+	├── bin
+	│   └── www
+	├── public
+	│   ├── javascripts
+	│   │    └── global.js
+	│   └── stylesheets
+	│        └── style.css
+	├── routes
+	│   ├── index.js
+	│   ├── usuarios.js
+	│   ├── index.js
+	│   └── questoes.js
+	├── models
+	│   ├── bean
+	│   │    ├── usuarios.js
+	│   │    └── questoes.js
+	│   └── dao
+	│        ├── usuarios.js
+	│        └── questoes.js
+	└── views
+		├── index.jade
+		└── layout.jade
 	```
 
 ----------
