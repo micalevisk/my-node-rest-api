@@ -2,12 +2,26 @@
  * API PARA O CONSUMO ÚTIL DO TELEGRAM BOT @forca_tarefa_bot
  * ---------------------------------------------------------
  * @author Micael Levi
- * @version 0.25-2
+ * @version 0.25-2  
  * 
  * Express API http://expressjs.com/en/api.html
  * @see https://www.youtube.com/watch?v=p-x6WdwaJco
  * @see http://stackoverflow.com/questions/17007997/how-to-access-the-get-parameters-after-in-express
  * @see https://html5hive.org/how-to-create-rest-api-with-node-js-and-express/
+ *  
+ * @todo [26/02]
+ *  alterações "momentâneas" no 'resources' através da API no Heroku @see https://gist.github.com/evenchange4/3773179 | https://devcenter.heroku.com/articles/deploying-nodejs
+ * 	----
+ *  O arquivo contendo o BD será um .json 'resource';
+ *  Ler o arquivo resource.json com o fs.readFileSync;
+ *  A cada método POST/PUT fazer a alteração neste arquivo usando o fs.writeFile;
+ *  Criar um app no Heroku e testar métodos que alteram o arquivo local para verificar se ele está sendo alterado;
+ * 
+ * @todo [27/02]
+ *  utilizar MC (inserir o módulo express-load) (vide simplicidade)
+ * 
+ * @todo [27/02]
+ *  utilizar ECMAScript 6
  */
 
 

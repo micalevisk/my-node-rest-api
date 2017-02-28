@@ -1,6 +1,7 @@
 {
   "name": "my-node-rest-api",
   "version": "1.0.0",
+	"private": true,
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -15,7 +16,7 @@
     "rest",
     "api"
   ],
-  "author": "Micael Levi",
+  "author": "Micael Levi <mykael2010@hotmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/micalevisk/my-node-rest-api/issues"
